@@ -14,10 +14,11 @@
 		7DA9157F28086CE5003E69BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA9157D28086CE5003E69BE /* Main.storyboard */; };
 		7DA9158128086CE6003E69BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA9158028086CE6003E69BE /* Assets.xcassets */; };
 		7DA9158428086CE6003E69BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA9158228086CE6003E69BE /* LaunchScreen.storyboard */; };
-		7DA9158C28086EE0003E69BE /* Heroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9158B28086EE0003E69BE /* Heroes.swift */; };
+		7DA9158C28086EE0003E69BE /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9158B28086EE0003E69BE /* Results.swift */; };
 		7DA9158E28086F15003E69BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9158D28086F15003E69BE /* NetworkManager.swift */; };
 		7DA915912808A07C003E69BE /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA915902808A07C003E69BE /* NetworkDataFetcher.swift */; };
 		7DA915932808E2F3003E69BE /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA915922808E2F3003E69BE /* CustomTableViewCell.swift */; };
+		7DE2FD212809921D002729FE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2FD202809921D002729FE /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +32,11 @@
 		7DA9158028086CE6003E69BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DA9158328086CE6003E69BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DA9158528086CE6003E69BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DA9158B28086EE0003E69BE /* Heroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroes.swift; sourceTree = "<group>"; };
+		7DA9158B28086EE0003E69BE /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		7DA9158D28086F15003E69BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7DA915902808A07C003E69BE /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		7DA915922808E2F3003E69BE /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		7DE2FD202809921D002729FE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EF116FA63D5543C78AEB02F8 /* Pods-RickAndMorty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMorty.release.xcconfig"; path = "Target Support Files/Pods-RickAndMorty/Pods-RickAndMorty.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +77,7 @@
 				7DA9157928086CE5003E69BE /* SceneDelegate.swift */,
 				7DA9158F28086F1D003E69BE /* Model */,
 				7DA915942808E2F7003E69BE /* View */,
-				7DA9157B28086CE5003E69BE /* ViewController.swift */,
+				7DE2FD1F28099203002729FE /* Controller */,
 				7DA9157D28086CE5003E69BE /* Main.storyboard */,
 				7DA9158028086CE6003E69BE /* Assets.xcassets */,
 				7DA9158228086CE6003E69BE /* LaunchScreen.storyboard */,
@@ -87,7 +89,7 @@
 		7DA9158F28086F1D003E69BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7DA9158B28086EE0003E69BE /* Heroes.swift */,
+				7DA9158B28086EE0003E69BE /* Results.swift */,
 				7DA9158D28086F15003E69BE /* NetworkManager.swift */,
 				7DA915902808A07C003E69BE /* NetworkDataFetcher.swift */,
 			);
@@ -100,6 +102,15 @@
 				7DA915922808E2F3003E69BE /* CustomTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7DE2FD1F28099203002729FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7DA9157B28086CE5003E69BE /* ViewController.swift */,
+				7DE2FD202809921D002729FE /* DetailViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		92F7C49AC3C1284A9264BDE7 /* Frameworks */ = {
@@ -116,7 +127,6 @@
 				6A46A558F9BCF55A9794CF7B /* Pods-RickAndMorty.debug.xcconfig */,
 				EF116FA63D5543C78AEB02F8 /* Pods-RickAndMorty.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -237,11 +247,12 @@
 			files = (
 				7DA915912808A07C003E69BE /* NetworkDataFetcher.swift in Sources */,
 				7DA9157C28086CE5003E69BE /* ViewController.swift in Sources */,
-				7DA9158C28086EE0003E69BE /* Heroes.swift in Sources */,
+				7DA9158C28086EE0003E69BE /* Results.swift in Sources */,
 				7DA915932808E2F3003E69BE /* CustomTableViewCell.swift in Sources */,
 				7DA9158E28086F15003E69BE /* NetworkManager.swift in Sources */,
 				7DA9157828086CE5003E69BE /* AppDelegate.swift in Sources */,
 				7DA9157A28086CE5003E69BE /* SceneDelegate.swift in Sources */,
+				7DE2FD212809921D002729FE /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
